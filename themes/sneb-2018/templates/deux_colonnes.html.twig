@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+ <h1>{{page.title}}</h1>
+    <div clss="row">
+        <div class="col-lg-12">
+
+            {{ page.media['snapshot.jpg'].resize(800).html("","","img-rounded") }}
+        </div>
+    </div>
+<div class="row">
+            <div class="col-lg-12">
+            {{content}}
+            </div>
+</div>
+<div class="row">       
+        {% for p in page.collection %}
+            <div 
+                id="{{ p.folder }}"
+                class="col-xs-6 col-md-6 col-sm-6">
+                    {{ p.content }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{#make simple modular in colr and col l#}

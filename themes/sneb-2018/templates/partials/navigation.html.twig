@@ -1,0 +1,33 @@
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) %}
+        {% set hasChild = p.children.visible.count > 0  %}
+        {% if hasChild %}
+            <li class="dropdown {{ current_page?'active':'inactive' }}" id="{{ p.folder }}">
+                <a href="#"
+                   class="dropdown-toggle {{ current_page?'active':''}}"
+                    data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"
+                    >
+                    {{ p.menu }} <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    {{ _self.loop(p) }}
+                </ul>
+            </li>
+        {% else %}
+            <li class="{{ current_page?'active':'inactive' }}">
+                <a href="{{ p.url }}">
+                    {{ p.menu }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+<ul class="nav navbar-nav navbar-right">
+    {% if theme_config.dropdown.enabled %}
+        {{ _self.loop(pages) }}
+    {% else %}
+       
+    {% endif %}
+  
+</ul>

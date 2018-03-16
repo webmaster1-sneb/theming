@@ -1,0 +1,32 @@
+{# empty Twig template #}
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+ <h1>{{page.title}}</h1>
+    <div clss="row">
+        <div class="col-lg-12">
+
+            {{ page.media['snapshot.jpg'].resize(800).html("","","img-rounded") }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            {{content}}
+        </div>
+    </div>
+        {% set m = 0 %}
+        <div class="row"> 
+            {% for p in page.collection %}
+                        {% if (m % 3 == 0) %}
+                            </div><div class="row"> 
+                        {% endif %}
+                            <div 
+                                id="{{ p.folder }}"
+                                class="col-md-3">
+                                    {{ p.content }}
+                            </div>
+
+                     {% set m = m+1 %}
+                    {% endfor %}
+                        <div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{# empty Twig template #}
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+            <h1>{{page.title}}</h1>
+    <div clss="row">
+        <div class="col-lg-12">
+
+            {{ page.media['snapshot.jpg'].resize(800).html("","","img-rounded") }}
+        </div>
+    </div>
+    {{ page.content }}
+    {% set p = page.find("/media/sneb-bienne") %}
+
+    {% set images = p.media.images %}
+ 
+      {% for image in images|reverse|slice(0,5) %}
+     <div clss="row">
+        <div class="col-lg-12">
+          <img src="/media/sneb-bienne/{{ image.filename}}" class="img-responsive img-rounded"/>
+        </div>
+     </div>
+      {% endfor %}
+   
+{% endblock %}

@@ -1,0 +1,46 @@
+{# empty Twig template #}
+{% extends 'partials/base.html.twig' %}
+{% block javascripts %}
+         {{parent()}}
+         {% do assets.addJs('http://widget.windguru.cz/js/wg_widget.php', 100) %}
+        {% do assets.addJs('theme://js/windguru.js', {'priority':102, 'pipeline':false, 'group':'bottom'}) %}
+    {% endblock %}
+{% block head %}
+    {{parent()}}
+    {{ assets.js() }}
+{% endblock %}
+{% block content %}
+        <h1>{{page.title}}</h1>
+    <div clss="row">
+        <div class="col-lg-12">
+
+            {{ page.media['snapshot.jpg'].resize(800).html("","","img-rounded") }}
+        </div>
+    </div>
+
+        <div clss="row">
+            <h3>Nidau</h3>
+            <div id="wg_target_div_56996_18795452"></div>
+        </div><div clss="row">
+            <h3>La Neuveville</h3>
+            <div id="wg_target_div_17495_10105469"></div>
+        </div><div clss="row">
+            <h3>Lüscherz</h3>
+            <div id="wg_target_div_56994_28069874"></div>
+        </div>
+        <div clss="row">
+            
+       {{ content }}
+        </div>
+{% endblock %}
+{#{% block body %}
+        {{ parent() }}
+        
+       <h3>Nidau</h3>
+            <div id="wg_target_div_56996_18795452"></div>
+            <h3>La Neuveville</h3>
+            <div id="wg_target_div_17495_10105469"></div>
+            <h3>Lüscherz</h3>
+            <div id="wg_target_div_56994_28069874"></div>
+         
+{% endblock %}#}

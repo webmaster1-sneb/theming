@@ -1,0 +1,27 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% block head %}
+    {% include 'partials/head.html.twig' %}
+    {% block javascripts %}{% endblock %}
+{% endblock %}
+<body id="top" class="{{ page.folder }}">
+
+{% include 'partials/header.html.twig' %}
+
+{% block body %}
+    <section id="body">
+ 
+             <div class="container">
+                {% block content %}{% endblock %}
+        </div>
+    </section>
+{% endblock %}
+
+{% include 'partials/footer.html.twig' %}
+
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
+{# put this in js assets #} 
+{#{% include 'partials/footer.html.twig' %}#}
+</body>
+</html>
