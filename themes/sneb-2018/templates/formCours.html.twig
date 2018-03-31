@@ -1,0 +1,11 @@
+{# empty Twig template #}
+
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+    {{ content|raw }}
+{#    {% include "forms/form.html.twig" %}#}
+    {% include "forms/default/formCours.html.twig" %}
+
+{% endblock %}
