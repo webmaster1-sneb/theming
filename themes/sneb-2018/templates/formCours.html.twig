@@ -1,11 +1,13 @@
 {# empty Twig template #}
 
 {% extends 'partials/base.html.twig' %}
-
+      
 {% block content %}
-
+    <h1>{{page.title}}</h1>
+     <div clss="row">
+        <div class="col-lg-12">
     {{ content|raw }}
-{#    {% include "forms/form.html.twig" %}#}
     {% include "forms/default/formCours.html.twig" %}
-
+        </div>
+     </div>
 {% endblock %}
