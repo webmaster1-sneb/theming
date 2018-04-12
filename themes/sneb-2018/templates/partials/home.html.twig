@@ -2,11 +2,15 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-   
+   <div class="row centered">
+       <div class="col-lg-12">
+           {{page.content}}
+       </div>
+   </div>
     {% set colArray = ["_connaitre", "_actualite", "_contacter"]%}
     {% set inc = 0 %}
         {% for p in page.collection %}
-            {{dump(p)}}
+{#            {{dump(p)}}#}
             {%if p.folder in colArray %}
                 {% if inc == 0 %}
                    
