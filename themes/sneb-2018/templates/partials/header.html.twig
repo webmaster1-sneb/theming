@@ -30,7 +30,7 @@
                         <div class="collapse navbar-collapse" id="navbar">
                             {% include 'partials/navigation.html.twig' %}
                             <a href="/"> 
-                                  <img src="{{ media['image://logo_bleu_wide.png'].html('', '', 'logo') }}" width="60"/></a>
+                                  {{  media['image://logo_bleu_wide.png']..resize(100).html('', '', 'logo') }} </a>
                             </div>
                         </div>
                     </div>
