@@ -23,14 +23,14 @@
                             <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
                             {%block logo %}
                                 <a class="navbar-brand" href="/">
-                                    {{  media['image://logo_bleu_wide.png'] }}
+                                    {{  media['image://logo_bleu_wide.png'].html('', '', 'logo') }}
                                 </a>
                              {% endblock %}
                         </div>
                         <div class="collapse navbar-collapse" id="navbar">
                             {% include 'partials/navigation.html.twig' %}
                             <a href="/"> 
-                                  <img src="{{ media['image://logo_bleu_wide.png']}}" width="60"/></a>
+                                  <img src="{{ media['image://logo_bleu_wide.png'].html('', '', 'logo') }}" width="60"/></a>
                             </div>
                         </div>
                     </div>
