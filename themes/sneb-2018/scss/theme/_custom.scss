@@ -12,7 +12,7 @@ html body .navbar-default .container-fluid .navbar-nav>li>a:hover{
     
 }
 html body .navbar-default .container-fluid .navbar-nav>li>a:focus{
-    background-color: #334455;
+    background-color: #2D3279;
 }
 html{
     body{
@@ -89,7 +89,7 @@ html{
                                 padding: .2em 1em;
                         }
                         > .active > a, > .active > a:hover, > .active > a:focus {
-                            background-color: #3355AA;
+                            background-color: #2D3279;
                             color:#fff;
                         }
                         >li>a:hover,>li>a:focus {
@@ -104,7 +104,7 @@ html{
                             border-top-color: #000000;
                         }
                         >.open > a, > .open > a:hover, > .open > a:focus {
-                            background-color: #3355AA;
+                            background-color: #2D3279;
                             color: #fff;
                             border-color: #fff;
                         }
@@ -116,12 +116,12 @@ html{
                             border-left: .8em double #dde;
                         }
                         >li.active{
-                            background-color: #3355AA;
+                            background-color: #2D3279;
                             color: #FFFFFF;
                             padding-left : .2em;
                             border: 0px;
                             >a {
-                                background-color: #3355AA;
+                                background-color: #2D3279;
                                 color: #FFFFFF;
                                 border-left: .8em double #fff;
                                 box-shadow: 0 1px 4px #000;
@@ -130,7 +130,7 @@ html{
                        
                     }
                     .navbar-brand{
-                        color: #3355AA;
+                        color: #2D3279;
                         float: left;
                         font-size: 1.5em;
                         padding-top: 8px;
@@ -143,9 +143,9 @@ html{
                         }
                     }
                     .navbar-toggle {
-                        border-color: #3355AA;
+                        border-color: #2D3279;
                         border-width: medium;
-                        background-color: #3355AA;
+                        background-color: #2D3279;
                         float:left !important; 
                         &:hover,&:focus
                         {
@@ -156,7 +156,7 @@ html{
                         }
                     }
                     .navbar-collapse, .navbar-form {
-                        border-color: #3355AA;
+                        border-color: #2D3279;
                     }
                     .nav > li > a {
                         display: block;
@@ -198,8 +198,8 @@ html{
         }
         h1
         {
-            color: #3355AA;
-            background-color: #3355AA;
+            color: #2D3279;
+            background-color: #2D3279;
             color: #FFFFFF;
             border-left: .8em double #fff;
             box-shadow: 0 1px 8px #000;
@@ -252,7 +252,7 @@ html{
              }
         }
         #_blockcentral1, #_blockcentral2{
-                background-color: #334455;
+                background-color: #2D3279;
                 border-color: #229900;
                 color:#fff;
                 font-size: 1em;
