@@ -26,9 +26,7 @@
 
     {% block javascripts %}
         {% do assets.addJs('jquery', 100) %}
-{#        {% do assets.addJs('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', {'priority':108, 'group':'bottom'}) %}#}
         {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', {'priority':102, 'group':'bottom'}) %}
-{#        {% do assets.addJs('theme://js/bootstrap.js', {'priority':102, 'group':'top'}) %}#}
         {% do assets.addJs('theme://js/modern-business.js', {'priority':102, 'group':'bottom'}) %}
     {% endblock %}
     {{ assets.js() }}
