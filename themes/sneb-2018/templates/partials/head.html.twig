@@ -28,6 +28,7 @@
         {% do assets.addJs('jquery', 100) %}
         {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', {'priority':102, 'group':'bottom'}) %}
         {% do assets.addJs('theme://js/modern-business.js', {'priority':102, 'group':'bottom'}) %}
+        {% do assets.addJs('theme://js/owl.carousel.min.js', {'priority':102}) %}
     {% endblock %}
     {{ assets.js() }}
 
