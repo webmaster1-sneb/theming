@@ -19,7 +19,7 @@
 {% include 'partials/footer.html.twig' %}
 
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 {# put this in js assets #} 
 {#{% include 'partials/footer.html.twig' %}#}
